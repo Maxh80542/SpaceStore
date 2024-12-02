@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Flutuante com Tela Transparente</title>
+    <link rel="stylesheet" href="Loading.css">
+</head>
+<body>
+    <!-- Contêiner da logo flutuante -->
+    <div class="logo-container">
+        <img src="Logo.png" alt="Logo Flutuante" class="dvd-logo">
+    </div>
+
+    <!-- Tela transparente sobre o conteúdo da loja -->
+    <div class="overlay">
+        <!-- Conteúdo de carregamento com animação -->
+        <div class="loading-content">
+            <p>Carregando melhores ofertas<span class="dots">.</span><span class="dots">.</span><span class="dots">.</span></p>
+        </div>
+
+        <!-- Frase de efeito -->
+        <div class="store-content">
+            <h1>Minha Loja Espacial</h1>
+            <p>Descubra um universo de possibilidades com produtos que vão além do comum!</p>
+        </div>
+    </div>
+
+    <script>
+        // Após 3 segundos, redireciona automaticamente para a página da loja
+        setTimeout(function() {
+            window.location.href = 'Loja.html'; // Redireciona para a página Loja.html após 3 segundos
+        }, 3000); // Atraso de 3 segundos
+    </script>
+</body>
+</html>

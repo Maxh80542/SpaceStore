@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Store</title>
+    <link rel="stylesheet" href="Loja.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="Logo2.webp" alt="Logo Space Store" class="logo-img">
+            <h1>Space Store</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#glow-up">Glow</a></li>
+                <li><a href="#acessorios">Acessórios</a></li>
+                <li><a href="#t-shirts">T-Shirts</a></li>
+                <li><a href="#calcas">Calças</a></li>
+            </ul>
+        </nav>
+
+        <!-- Seletor de categoria -->
+        <div class="category-switcher">
+            <select id="category" onchange="changeCategory()">
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="kids">Kids</option>
+            </select>
+        </div>
+
+        <!-- Barra de pesquisa -->
+        <div class="search-bar">
+            <input type="text" placeholder="Procurar..." id="search">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <!-- Seção principal -->
+    <main>
+        <!-- Categoria Glow Up -->
+        <section id="glow-up">
+            <h2>Produtos Oversized StreetWear</h2>
+            <div class="product-grid">
+                <!-- Produto Shopee - Camiseta Oversized -->
+                <div class="product-card">
+                    <img id="product-image" src="CAMISETA-IMAGEM.jpg" alt="Camiseta Oversized Gola Redonda" class="product-img">
+                    <h3>Camiseta Oversized Gola Redonda</h3>
+                    <p>Descrição breve do produto...</p>
+                    <!-- Link para o WhatsApp com a mensagem personalizada -->
+                    <a href="https://wa.me/5562982093453?text=Olá,%20estou%20interessado%20na%20Camiseta%20Oversized%20Gola%20Redonda%20da%20sua%20loja.%20Veja%20o%20produto%20aqui:%20https://www.seusite.com.br/produtos/camiseta-oversized&image=https://www.seusite.com.br/imagens/camiseta-oversized.jpg" target="_blank">
+                        <button>Comprar no WhatsApp</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categoria T-Shirts -->
+        <section id="t-shirts">
+            <h2>T-Shirts</h2>
+            <div class="product-grid">
+                <!-- Adicione mais produtos de T-Shirts -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Ícones de Redes Sociais (WhatsApp e Instagram) -->
+    <div class="social-icons">
+        <!-- Ícone do WhatsApp -->
+        <a href="https://w.app/SpaceStore" target="_blank">
+            <img src="whatsapp.png" alt="WhatsApp" class="social-icon">
+        </a>
+        <!-- Ícone do Instagram -->
+        <a href="https://www.instagram.com/SpaceStore" target="_blank">
+            <img src="instagram.png" alt="Instagram" class="social-icon">
+        </a>
+    </div>
+
+    <!-- Script para carregar a imagem do produto -->
+    <script src="image-loader.js"></script>
+
+    <!-- Script para mudar a categoria e outros comportamentos -->
+    <script>
+        function changeCategory() {
+            const category = document.getElementById("category").value;
+            // Remover classes de categoria existentes (se houver)
+            document.body.classList.remove("feminino", "masculino", "kids");
+            // Adicionar a classe da categoria selecionada
+            document.body.classList.add(category);
+        }
+    </script>
+</body>
+</html>

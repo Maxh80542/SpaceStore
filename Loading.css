@@ -1,0 +1,82 @@
+/* Tela preta */
+body, html {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    overflow: hidden; /* Impede barras de rolagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo flutuante */
+.logo-container {
+    position: absolute;
+    width: 80px; /* Largura do logo */
+    height: 80px; /* Altura do logo */
+    animation: moveAcrossScreen 40s infinite ease-in-out; /* Movimento mais longo e variado */
+}
+
+.dvd-logo {
+    width: 100%;
+    animation: rotateLogo 6s infinite linear; /* Rotação mais lenta */
+}
+
+/* Animação de movimento da logo */
+@keyframes moveAcrossScreen {
+    0% {
+        transform: translate(5vw, 5vh); /* Canto superior esquerdo */
+    }
+    10% {
+        transform: translate(50vw, 10vh); /* Próximo ao topo, meio */
+    }
+    20% {
+        transform: translate(calc(100vw - 5vw), 5vh); /* Canto superior direito */
+    }
+    30% {
+        transform: translate(50vw, 0vh); /* Meio superior */
+    }
+    40% {
+        transform: translate(5vw, 5vh); /* Volta ao ponto inicial */
+    }
+}
+
+/* Animação dos 3 pontos piscando */
+.dots {
+    animation: dot-blink 1.5s infinite;
+}
+
+.dots:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.dots:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes dot-blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Estilo do conteúdo de carregamento */
+.loading-content {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+/* Estilo do conteúdo da loja */
+.store-content {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+}
